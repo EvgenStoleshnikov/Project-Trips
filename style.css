@@ -109,7 +109,7 @@ header {
 h1 {
 	color: #FFF;
 	font-family: "Inter", sans-serif;
-	font-size: 96px;
+	font-size: 6.1vw;
 	font-weight: 900;
 	text-align: center;
 	line-height: 96.818%;
@@ -118,7 +118,7 @@ h1 {
 h2 {
 	color: #FFF;
 	font-family: "Inter", sans-serif;
-	font-size: 30px;
+	font-size: 1.9vw;
 	font-weight: 100;
 	text-align: center;
 	margin-top: 48px;
@@ -158,7 +158,7 @@ h2 {
 h3 {
 	color: #FFF;
 	font-family: "Inter", sans-serif;
-	font-size: 54px;
+	font-size: 3.4vw;
 	font-weight: 900;
 	line-height: 108.92%;
 	padding-bottom: 45px;
@@ -167,7 +167,7 @@ h3 {
 h4 {
 	color: #FFF;
 	font-family: "Inter", sans-serif;
-	font-size: 24px;
+	font-size: 1.5vw;
 	font-weight: 400;
 	line-height: 157.33%;
 }
@@ -228,12 +228,17 @@ h4 {
 	font-style: normal;
 }
 
+.content-photo-content {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .content-photo-grid {
 	display: flex;
 	width: 100%;
 	max-width: 1184px;
-	align-items: flex-start;
-	align-content: flex-start;
 	gap: 16px;
 	flex-wrap: wrap;
 	margin-top: 92px;
@@ -243,6 +248,12 @@ h4 {
 	width: 284px;
 	height: 188px;
 	border-radius: 5px;
+	transition: all 300ms ease-in-out;
+}
+
+.content-photo-grid-item:hover {
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  	transform: translateY(-5px);
 }
 
 .content-places {
@@ -767,4 +778,30 @@ h4 {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 145.227%;
+}
+
+@media screen and (max-width: 1220px) {
+	header {
+		width: 928px;
+	}
+	
+	.content-photo-grid {
+		width: 928px;
+	} 
+	.content-photo-grid-item {
+		width: 300px;
+		height: 200px;
+	}
+	.content-photo-grid {
+		gap: 14px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	header,
+	.content-intro,
+	.content-lead,
+	.content-lead-foto {
+		width: 928px;
+	}
 }
